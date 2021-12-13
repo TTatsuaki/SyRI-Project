@@ -5,17 +5,18 @@ If you do not know what it is, then you are at the right place. Indeed, we are h
 #### Here is a quick summary of what you will find on this page:
 A short presentation of the scandal 
 
-A focus on the algorithm that has been used and its issues
+A focus on the **algorithm** that has been used and its issues
 
-Our group project, which consist in recreating the results of the SyRI-algorithm with the dataset of another country
+Our group project, which consist in **recreating the results** of the SyRI-algorithm with the **dataset of another country
 
-A legal discussion on the topic of discrimination and algorithm
+A **legal discussion** on the topic of **discrimination** and algorithm
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+...and finally a short summary if you are too lazy to read the whole page :)
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+
+
+
 
 ```markdown
 Syntax highlighted code block
