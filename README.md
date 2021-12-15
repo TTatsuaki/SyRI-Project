@@ -12,7 +12,7 @@ Between 2013 and 2019, 26,000 households were wrongly accused by Dutch authoriti
 
 ## Legal aspects : Why we decided to talk about this ?
 
-From then on, using nationality was equivalent to differentiate people based on their ethnicity, which is a clear violation of fundamental rights. Yet, the Dutch Tax office was fined €2.75 million only for privacy violations by national courts.
+From then on, using nationality was equivalent to differentiate people based on their ethnicity, which is a clear violation of fundamental rights. Yet, the Dutch Tax office was fined €2.75 million only for privacy violations by national courts, and led to the collapse of the Dutch government. 
 
 ![dutch NP headline](https://user-images.githubusercontent.com/96054718/146206584-707c1a55-7f7e-426a-ae9f-53cccff204c5.png) 
 
@@ -32,7 +32,7 @@ European lawyers are currently working on this major difficulty through recommen
 
 ## The Syri System :
 
-In the case of the SyRI case the risk classification model was a black box system that included a self-learning algorithm. This means the civil servant did not have access to any details about what information had been used as the basis for assigning a specific risk score to an applicant as in a Black box systems, inputs and workings are not visible to the users of the system. Therefore, the self-learning algorithm gave the risk classification model the ability to learn from experiences over time, independently and autonomously, and to make changes to how it worked without these changes being explicitly programmed by the programmers from the tax authorities. 
+In the case of the SyRI case the risk classification model was a black box system that included a self-learning algorithm. This means the civil servant did not have access to any details about what information had been used as the basis for assigning a specific risk score to an applicant as in a Black box systems, inputs and workings are not visible to the users of the system. Therefore, the self-learning algorithm gave the risk classification model the ability to learn from experiences over time, independently and autonomously, and to make changes to how it worked without these changes being explicitly programmed by the programmers from the tax authorities. It means that the way in which the information are processed in the software are very likely to be influenced by the nature and the composition of the data that have been used for the training of the algorithm. 
 After investigation by the the Dutch Data Protection Authority (AP), it was established that NATIONALITY was an indicator used in the risk assessment.
 
 
