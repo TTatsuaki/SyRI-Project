@@ -11,4 +11,4 @@ Our group project, which consist in **recreating the results** of the SyRI-algor
 
 A **legal discussion** on the topic of **discrimination** and algorithm
 
-...and finally a short summary if you are too lazy to read the whole page :)
+...and finally a short summary if you are too lazy to read the whole page :) 
