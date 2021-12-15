@@ -37,13 +37,30 @@ After investigation by the the Dutch Data Protection Authority (AP), it was esta
 
 
 
-## Our project:
+## Methodology:
 
-Based on a similar idea, we create our own model by using a dataset with enough informations in order to illustrate how discriminatory biases may occur. The data contained in it does not concern the Netherlands, but rather the US. The reason why is that data about european citizen are more difficult to find due to the European legislation. 
-We use 5 variables (employment status, level of education, marital status, gender and the country of origin) to which we assign between 2 and 6 options (e.g. married/divorced/never married). To each of these options corresponds a value. Eventually, the addition of the values give us a score that indicate whether or not the individual is likely to fraud.
+Despite the fact the Dutch authorities have not revealed the other variables used to determine risk-factor of the Dutch citizens, we have decided to model likely database entries that are used. The relevant variables are illustrated below. 
 
+Consequently, we are creating our model to model the risk-classication algorithm by using a dataset with enough informations in order to illustrate how discriminatory biases may occur. The data contained in it does not concern the Netherlands, but rather the US. The reason why is that data about european citizen are more difficult to find due to the European legislation (GDPR). 
+We use 5 variables:
+- employment status
+- level of education
+- marital status
+- gender 
+- country of origin
+
+to which we assign between 2 and 6 variablities (e.g. married/divorced/never married).
+To each of these options corresponds a weight to the likeliness of comitting fraud. 
+The range of the weight is **between 0 and 1** -- 0 being most likely to commit fraud, 1 being least likely to commit fraud. 
+The range of these values are chosen in order to stay close to the orginal Dutch SyRI model, which assigned the weight of likeliness of fraud between 0 and 1 as well. 
+Eventually, the overall aggragated weight give us a score that indicate whether or not the individual in the model is likely to fraud.
+
+
+//
 In a second step, in order to refine our algorithm, we assign a specific coefficient to each variable in that each variable influences the outcome (likelihood to commit fraud) differently. To calculate the weight of each variable, we rely on academic papers that explain statistic relations between Crime rate and different variables. Those studies conducted the Chi-square test which determine whether there is a statistically significant difference (null hypothesis) between the expected frequencies and the observed frequencies. In other words, it shows to which extent  two variables are independent.
 After some manipulation of the Chi-square, we conclude that gender is the most influencing variable on the likelihood to commit crime, followed by education, marital status and employment status.
 The final step is to add nationality as a determining variable in order to compare results with and without and see how nationality is important and whether the results correlate in both cases.  
+//
+
 
 
