@@ -1,6 +1,6 @@
 ## What happened? 
 
-Between 2013 and 2019, 26,000 households were wrongly accused by Dutch authorities of committing fraudulent tax benefit claims. Parents received orders which required them to pay back the childcare benefits they received in their entirety, often representing tens of thousands of euros. Moreover, minorities were disproportionately affected as over 8,000 Caribbean-Dutch families were falsely accused. This was due to a risk classification algorithm used for the sake of fraud monitoring that turned out to be discriminatory and filled with institutional biases. 
+Between 2013 and 2019, 26,000 households were wrongly accused by Dutch authorities of committing fraudulent tax benefit claims. Parents received orders which required them to pay back the childcare benefits they received in their entirety, often representing tens of thousands of euros. Moreover, minorities were disproportionately affected as over 8,000 Caribbean-Dutch families were falsely accused. This was due to a risk classification algorithm used for the sake of fraud monitoring that turned out to be discriminatory and filled with institutional biases. In many cases, this sum amounted to tens of thousands of euros, driving families into severe financial hardship. 
 
 
 ![picture scandal Netherlands guardians](https://user-images.githubusercontent.com/96054718/146206542-ae0d1175-04c8-4631-a6b4-c8400303308b.png)
