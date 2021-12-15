@@ -14,4 +14,4 @@ A **legal discussion** on the topic of **discrimination** and algorithm
 
 __________________________________________________________________________________________________________________
 
- #### If you are teased by these elements, you will enjoy our Github page that you can access through the link below
+If you are teased by these elements, you will enjoy our Github page that you can access through the link below
