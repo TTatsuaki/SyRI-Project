@@ -2,9 +2,13 @@
 
 Between 2013 and 2019, 26,000 households were wrongly accused by Dutch authorities of committing fraudulent tax benefit claims. Parents received orders which required them to pay back the childcare benefits they received in their entirety, often representing tens of thousands of euros. Moreover, minorities were disproportionately affected as over 8,000 Caribbean-Dutch families were falsely accused. This was due to a risk classification algorithm used for the sake of fraud monitoring that turned out to be discriminatory and filled with institutional biases. 
 
+![picture scandal Netherlands guardians](https://user-images.githubusercontent.com/96054718/146206542-ae0d1175-04c8-4631-a6b4-c8400303308b.png)
+![picture BBC fraud scandal (testimony)](https://user-images.githubusercontent.com/96054718/146206561-8e46a6db-4fb7-4c50-8232-c978610499cd.png)
+
 ## Legal aspects : Why we decided to talk about this ?
 
 From then on, using nationality was equivalent to differentiate people based on their ethnicity, which is a clear violation of fundamental rights. Yet, the Dutch Tax office was fined €2.75 million only for privacy violations by national courts.
+![dutch NP headline](https://user-images.githubusercontent.com/96054718/146206584-707c1a55-7f7e-426a-ae9f-53cccff204c5.png) 
 This decision is particularly revealing of a growing problem faced by the law: the difficulty of identifying and punishing algorithmic discrimination despite an already extensive legal arsenal on discrimination issues.
 Indeed, discrimination is prohibited in the vast majority of legal systems across the world and also by the Universal Declaration of Human Rights (art. 7), the European Convention of Human Rights (art. 14) and the European Union law (Treaty on European Union, art. 2 and 3 ; Treaty on the functioning of the European Union, art. 10 ;  Charter of Fundamental Rights of the EU, art. 21,  Directive 2004/113/EC that includes prohibition of discrimination in social security and healthcare).
 According to the United Nations, a discrimination is « any distinction, exclusion, restriction or preference which is based on any grounds such as race, colour, sex, language, religion, political or other opinion, national or social origin, property, birth or other status, and which has the purpose or effect of nullifying or impairing the recognition, enjoyment or exercise by all persons, on an equal footing, of all rights and freedoms ». The Council of Europe defines it as « treating people in analogous situations differently, or people in different situations alike, without objective and reasonable justification ».  
