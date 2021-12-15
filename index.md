@@ -11,4 +11,7 @@ Our group project, which consist in **recreating the results** of the SyRI-algor
 
 A **legal discussion** on the topic of **discrimination** and algorithm
 
-...and finally a short summary if you are too lazy to read the whole page :) 
+
+__________________________________________________________________________________________________________________
+
+ #### If you are teased by these elements, you will enjoy our Github page that you can access through the link below
