@@ -100,7 +100,7 @@ The final step is to add nationality as a determining variable in order to compa
 
 ## Results 
 
-[Your Link Here](https://colab.research.google.com/drive/1OuCX3T0kGAYSRSNwVhUgN3KRQ-dfbw4U#scrollTo=hwVdMgJX7LnR)
+[Link To Our Notebook](https://colab.research.google.com/drive/1OuCX3T0kGAYSRSNwVhUgN3KRQ-dfbw4U#scrollTo=hwVdMgJX7LnR)
 
 ![alt text](http://url/to/img.png)
 
