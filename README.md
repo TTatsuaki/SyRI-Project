@@ -20,6 +20,12 @@ received higher risk scores.
 ![picture BBC fraud scandal (testimony)](https://user-images.githubusercontent.com/96054718/146206561-8e46a6db-4fb7-4c50-8232-c978610499cd.png)
 
 
+## Literature review 
+
+To analyse how the childcare benefits algorithm worked, we have tried to investigate reports from independent oversight bodies: 
+firstly, the report Dutch Data Protective Authorities (AP), which was the only source available that directly conducted research with the Dutch Tax Authortities to analyse the algorithm in question. 
+Secondly, a report by the Amnesty International organization, who did an extensive review on why the algorithm harmed the protection of human rights, analyzed the algorithm etensively by compiling a range of relevant sources, as well as using the case as an argument to put forth concrete demand within the European Union to refrain governments from using self-learning decison-making algorithms where nationality is used as a risk-determinant. 
+Thirdly, we have used a multitude of legal cases in order to understand the legal implications of the algorithm. 
 
 
 ## Legal aspects : Why we decided to talk about this ?
@@ -92,12 +98,7 @@ The final step is to add nationality as a determining variable in order to compa
 //
 
 
-## Literature review 
 
-To analyse how the childcare benefits algorithm worked, we have tried to investigate reports from independent oversight bodies: 
-firstly, the report Dutch Data Protective Authorities (AP), which was the only source available that directly conducted research with the Dutch Tax Authortities to analyse the algorithm in question. 
-Secondly, a report by the Amnesty International organization, who did an extensive review on why the algorithm harmed the protection of human rights, analyzed the algorithm etensively by compiling a range of relevant sources, as well as using the case as an argument to put forth concrete demand within the European Union to refrain governments from using self-learning decison-making algorithms where nationality is used as a risk-determinant. 
-Thirdly, we have used a multitude of legal cases in order to understand the legal implications of the algorithm. 
 
 ## Conclusion
 
