@@ -1,12 +1,24 @@
 ## What happened? 
+Around the world, algorithmic decision-making systems are increasingly deployed to automate governmental tasks and to identify, detect, and punish people that meet a presupposed profile of alleged criminal activity. What variables are deployed to construct a "presupposed profile", are often human determined, and thus prone to bias. Govornments are increasingly using such algorithmic decision-making system with a particular objective to combat fraud. In the Netherlands, fraud became increasingly more important within political debate since the early 2000's. Consequently, stricter policy measurements to combat fraud were developed. 
+In turn, the use of such algorithmic decion-making systems can lead to unforeseen consequences, especially if these models are programmed with an unexpected bias.
+In the Netherlands, such a case has come to forefront: it is known as the "Dutch Childcare benefits schandal" (Dutch: de Toeslagenaffaire)
+In 2013, an algorithmic decision-making system for fraud detection was adopted: the “risk classification model”. (In English, also known as SyRI: "system risk indication")
 
-Between 2013 and 2019, 26,000 households were wrongly accused by Dutch authorities of committing fraudulent tax benefit claims. Parents received orders which required them to pay back the childcare benefits they received in their entirety, often representing tens of thousands of euros. Moreover, minorities were disproportionately affected as over 8,000 Caribbean-Dutch families were falsely accused. This was due to a risk classification algorithm used for the sake of fraud monitoring that turned out to be discriminatory and filled with institutional biases. In many cases, this sum amounted to tens of thousands of euros, driving families into severe financial hardship. 
+Between 2013 and 2019, 26,000 households were wrongly accused by Dutch authorities of committing fraudulent tax benefit claims. Parents received orders which required them to pay back the childcare benefits they received in their entirety, often representing tens of thousands of euros. 
+The financial repercussions for these parents were often so high, that this affected their personal life severely. Many parents reported to have had mental health issues, divorce, or even considered suicide. 
+
+Moreover, minorities were disproportionately affected as over 8,000 Caribbean-Dutch families were falsely accused. 
+It has thus come to light, that the scandal included racial profiling by the risk classification model, which is the focus of our project. 
+The tax authorities used information on whether an applicant had Dutch nationality as a risk factor in the algorithmic system. “Dutch citizenship: yes/no” was used as a parameter in the risk classification model for assessing the risk of inaccurate applications. Consequently, people of non-Dutch nationalities
+received higher risk scores. 
+
 
 
 ![picture scandal Netherlands guardians](https://user-images.githubusercontent.com/96054718/146206542-ae0d1175-04c8-4631-a6b4-c8400303308b.png)
 
 
 ![picture BBC fraud scandal (testimony)](https://user-images.githubusercontent.com/96054718/146206561-8e46a6db-4fb7-4c50-8232-c978610499cd.png)
+
 
 
 
@@ -30,9 +42,12 @@ European lawyers are currently working on this major difficulty through recommen
 
 
 
-## The Syri System :
+## The SyRI System:
 
-The risk classification model was a black box system that included a self-learning algorithm. This means the civil servant did not have access to any details about what information had been used as the basis for assigning a specific risk score to an applicant as in a Black box systems, inputs and workings are not visible to the users of the system. Therefore, the self-learning algorithm gave the risk classification model the ability to learn from experiences over time, independently and autonomously, and to make changes to how it worked without these changes being explicitly programmed by the programmers from the tax authorities. 
+The risk classification model was a black box system that included a self-learning algorithm. This means the civil servant did not have access to any details about what information had been used as the basis for assigning a specific risk score to an applicant as in a Black Box systems, inputs and workings are not visible to the users of the system. Therefore, the self-learning algorithm gave the risk classification model the ability to learn from experiences over time, independently and autonomously, and to make changes to how it worked without these changes being explicitly programmed by the programmers from the tax authorities. 
+
+
+
 
 The case was brought by several civil rights organizations, including the Netherlands Committee of Jurists for Human Rights (Nederlands Juristen Comité voor de Mensenrechten, NJCM), and two natural persons against the Dutch government. At first, the Hague Court issued a decision on 5 February 2020 acknowledging that the government had breached the right to privacy and family life set out in Article 8 of the ECHR and ordered  that it cease using this algorithm. The judges based their decision on the fact that the algorithm Syri lacked transparency. The court did not address a possible breach of Article 22 of the GDPR which bans automated decision-making in some cases, nor held that the system was clearly discriminating even though, the use of nationality was equivalent to differentiate people based on their ethnicity, which is a clear violation of the principle of non-discrimination. 
 
@@ -61,6 +76,9 @@ The range of these values are chosen in order to stay close to the orginal Dutch
 Eventually, the overall aggragated weight give us a score that indicate whether or not the individual in the model is likely to fraud.
 
 
+
+
+
 //
 In a second step, in order to refine our algorithm, we assign a specific coefficient to each variable in that each variable influences the outcome (likelihood to commit fraud) differently. To calculate the weight of each variable, we rely on academic papers that explain statistic relations between Crime rate and different variables. Those studies conducted the Chi-square test which determine whether there is a statistically significant difference (null hypothesis) between the expected frequencies and the observed frequencies. In other words, it shows to which extent  two variables are independent.
 After some manipulation of the Chi-square, we conclude that gender is the most influencing variable on the likelihood to commit crime, followed by education, marital status and employment status.
@@ -68,4 +86,18 @@ The final step is to add nationality as a determining variable in order to compa
 //
 
 
+## Literature review 
+
+To analyse how the childcare benefits algorithm worked, we have tried to investigate reports from independent oversight bodies: 
+firstly, the report Dutch Data Protective Authorities (AP), which was the only source available that directly conducted research with the Dutch Tax Authortities to analyse the algorithm in question. 
+Secondly, a report by the Amnesty International organization, who did an extensive review on why the algorithm harmed the protection of human rights, analyzed the algorithm etensively by compiling a range of relevant sources, as well as using the case as an argument to put forth concrete demand within the European Union to refrain governments from using self-learning decison-making algorithms where nationality is used as a risk-determinant. 
+Thirdly, we have used a multitude of legal cases in order to understand the legal implications of the algorithm. 
+
+## Conclusion
+
+All in all, the childcare benefits affair of the Netherlands has certainly supported the argument that AI
+algorithms can be discriminatory, and that they can cause severe implications. With the increase of
+the use of algorithms in data processing of governments and institutions, the risk of discrimination to
+become more evident is very logical, considering most bias already preexisted within the institutions
+that adopted the biased systems.
 
