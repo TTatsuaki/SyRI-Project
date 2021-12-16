@@ -103,6 +103,14 @@ The final step is to add nationality as a determining variable in order to compa
  [Link To Our Notebook](https://colab.research.google.com/drive/1OuCX3T0kGAYSRSNwVhUgN3KRQ-dfbw4U#scrollTo=hwVdMgJX7LnR) 
 
 ![alt text](http://url/to/img.png)
+The results were compatible with our initial hypothesis. By replacing the variables (education, marital status, occupation, and sex) into numerical valuables, we ran a code to calculate the final score that detects the likelihood of a person committing a fraud (0 to 1, the larger the score is, the less likely they will commit frauds). From the final score, we calculated the average score for each nationality, which showed the likelihood of people from each country committing frauds, based on their demographics. The results showed that there are a number foreigners scoring higher than the Americans. The score calculated for an average US citizen (0.771865), was ranked the 19th out of 41 coutnries. This means that there are 18 nationalities ahead of the American nationality that were identified to be 'less riskier'. This shows that, according to the dataset we had with the equation we prepared, foreigners were not identified to be riskier. This could suggest that the Dutch SyRI system was heavily biased, as our hypothesis predicted. According to our results, using nationality as an indicator does not improve the result as nationals were not identified to be less risky. Even for those foreigners that scored lower than Americans, there was not a huge difference in terms of the score. No country scored below 0.7, where Portugal being the lowest scoring 0.709531, roughly a 0.06 point difference. 
+
+## Limitations of our study
+Although we did our best to come up with a study that closely illustrated the Dutch SyRI case, our study is limited in various ways. 
+In terms of our methodology, firstly, the dataset used was an American one. It was hard to find a dataset that had detailed demographic descriptions, and the one we used was the most detailed and comprehensive one. When it comes to coming up with the equation we used to calculate the risk score, we made sure that there are reasons behind the way we assign values for each variable, and putting weights (coefficients). During this process, however, multiple studies were used at once, which was not ideal as those studies obviously treated different matters with different datasets. 
+Yet, despite all the factors that we could control, the result observed was contrary to 
+
+## Further research topics
 
 
 
