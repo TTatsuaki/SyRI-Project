@@ -1,5 +1,5 @@
 ## What happened? 
-Around the world, algorithmic decision-making systems are increasingly deployed to automate governmental tasks and to identify, detect, and punish people that meet a presupposed profile of alleged criminal activity. What variables are deployed to construct a "presupposed profile", are often human determined, and thus prone to bias. Govornments are increasingly using such algorithmic decision-making system with a particular objective to combat fraud. In the Netherlands, fraud became increasingly more important within political debate since the early 2000's. Consequently, stricter policy measurements to combat fraud were developed. 
+Around the world, algorithmic decision-making systems are increasingly deployed to automate governmental tasks and to identify, detect, and punish people that meet a presupposed profile of alleged criminal activity. What variables are deployed to construct a "presupposed profile", are often human determined, and thus prone to bias. Governments are increasingly using such algorithmic decision-making system with a particular objective to combat fraud. In the Netherlands, fraud became increasingly more important within political debate since the early 2000's. Consequently, stricter policy measurements to combat fraud were developed. 
 In turn, the use of such algorithmic decion-making systems can lead to unforeseen consequences, especially if these models are programmed with an unexpected bias.
 In the Netherlands, such a case has come to forefront: it is known as the "Dutch Childcare benefits schandal" (Dutch: de Toeslagenaffaire)
 In 2013, an algorithmic decision-making system for fraud detection was adopted: the “risk classification model”. (In English, also known as SyRI: "system risk indication")
@@ -45,6 +45,12 @@ European lawyers are currently working on this major difficulty through recommen
 ## The SyRI System:
 
 The risk classification model was a black box system that included a self-learning algorithm. This means the civil servant did not have access to any details about what information had been used as the basis for assigning a specific risk score to an applicant as in a Black Box systems, inputs and workings are not visible to the users of the system. Therefore, the self-learning algorithm gave the risk classification model the ability to learn from experiences over time, independently and autonomously, and to make changes to how it worked without these changes being explicitly programmed by the programmers from the tax authorities. 
+
+The risk classification model was developed by comparing historic examples of correct and incorrect
+applications. In practice, this meant that the more an incoming application resembled an application that had previously been classified as inaccurate, the higher the risk score assigned to that incoming application. The system selected applications with the highest risk scores for manual review by a civil
+servant. The civil servant in turn had the power to label an application as fraudulent. The civil servant, however, was given no information as to why the system had given the application a high-risk score for inaccuracy.
+
+The nationality of the applicant was used to determine whether that person was a Dutch citizen. “Dutch citizenship: yes/no” was used as a parameter in the risk classification model for assessing the risk of inaccurate applications. 
 
 
 
