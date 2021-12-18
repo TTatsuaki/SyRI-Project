@@ -71,38 +71,26 @@ Recently, on 8 December 2021, DPA has imposed a €2.75 million fine on the Dutc
 
 ## Methodology:
 
-Despite the fact the Dutch authorities have not revealed the other variables used to determine risk-factor of the Dutch citizens, we have decided to model likely database entries that are used. The relevant variables are illustrated below. 
+Despite the fact the Dutch authorities have not revealed the other variables used to determine risk-factor of the Dutch citizens, we have decided to model likely database entries that are used. The relevant variables are illustrated below.
 
-Consequently, we are creating our model to model the risk-classication algorithm by using a dataset with enough informations in order to illustrate how discriminatory biases may occur. The data contained in it does not concern the Netherlands, but rather the US. The reason why is that data about european citizen are more difficult to find due to the European legislation (GDPR). 
-We use 5 variables:
-- employment status
-- level of education
-- marital status
-- gender 
-- country of origin
+Consequently, we are creating our model to model the risk-classication algorithm by using a dataset with enough informations in order to illustrate how discriminatory biases may occur. The data contained in it does not concern the Netherlands, but rather the US. The reason why is that data about European citizens are more difficult to find due to the European legislation (GDPR). We use 4 variables:
 
-to which we assign between 2 and 6 variablities (e.g. married/divorced/never married).
-To each of these options corresponds a weight to the likeliness of comitting fraud. 
-The range of the weight is **between 0 and 1** -- 0 being most likely to commit fraud, 1 being least likely to commit fraud. 
-The range of these values are chosen in order to stay close to the orginal Dutch SyRI model, which assigned the weight of likeliness of fraud between 0 and 1 as well. 
-Eventually, the overall aggragated weight give us a score that indicate whether or not the individual in the model is likely to fraud.
+employment status
+level of education
+marital status
+gender
 
+to which we assign between 2 and 6 variablities (e.g. married/divorced/never married). To each of these options corresponds a weight to the likeliness of comitting fraud. The range of the weight is between 0 and 1 -- 0 being most likely to commit fraud, 1 being least likely to commit fraud. The range of these values are chosen in order to stay close to the orginal Dutch SyRI model, which assigned the weight of likeliness of fraud between 0 and 1 as well. For instance, data reveals that males are more likely to commit frauds than females. 60% of frauds that occurred in the United States in 2011 were committed by males. For this reason, we assigned the value of 1 for females, and 0.667 for males (values are rounded up to the third decimal places). Eventually, the overall aggragated weight gives us a score that indicates whether or not the individual in the model is likely to commit fraud.
+Numerical values for occupation and marital status were determined in similar manners. For occupation, we hypothesised that an individual's income negatively correlates to the likelihood of committing frauds. We therefore observed US average income data in order to determine the values. For marital status, we explored a study conducted by _____ _that explained how people who are single are less likely to commit frauds, then widowed, then married (which was a surprise to us!). Hence, we assigned the biggest value for single individuals, and the other to married ones. 
+Lastly, for education, the original dataset contained the number of years of education each individual pursued. We hypothesised that the longer you are pursuing your studies, the less likely you are to commit frauds. However, at the same time, we concluded that assuming the likelihood of frauds to decrease in a linear manner depending on the years of education would exaggerate the significance of this variable. Our assumption is that a person who completed 4 years of education, for instance, would NOT be riskier than people who completed doctors by a scale of 4. To moderate the effect, we square rooted all the values, which ranged from 1 to 4. Finally, we divided the values by 4 to fit all values to our equation (for the range to stay between 0 to 1). 
 
 //
-In a second step, in order to refine our algorithm, we assign a specific coefficient to each variable in that each variable influences the outcome (likelihood to commit fraud) differently. To calculate the weight of each variable, we rely on academic papers that explain statistic relations between Crime rate and different variables. Those studies conducted the Chi-square test which determine whether there is a statistically significant difference (null hypothesis) between the expected frequencies and the observed frequencies. In other words, it shows to which extent  two variables are independent.
-After some manipulation of the Chi-square, we conclude that gender is the most influencing variable on the likelihood to commit crime, followed by education, marital status and employment status.
-The final step is to add nationality as a determining variable in order to compare results with and without and see how nationality is important and whether the results correlate in both cases.  
+In a second step, in order to refine our algorithm, we assign a specific coefficient to each variable in that each variable influences the outcome (likelihood to commit fraud) differently. To calculate the weight of each variable, we rely on academic papers that explain statistic relations between Crime rate and different variables. Those studies conducted the Chi-square test which determine whether there is a statistically significant difference (null hypothesis) between the expected frequencies and the observed frequencies. In other words, it shows to which extent two variables are independent. Studies revealed that F-values, and subsequent p-values were more statistically significant for some variables, hence assigned them more
+weight (a smaller p value allows us to reject the null hypothesis that the 2 variables, with likelihood to commit crime as the dependent variable, are independent. In other words, the smaller the p-value is, the more confidence we could have to argue that the two values are dependent on each other). We concluded that gender is the most influencing variable on the likelihood to commit crime, followed by education, marital status and employment status. 
+
+For the equation we have come up with, we were able to calculate a score for each individual. Then, those individuals were grouped by nationality, to calculate the average score for each. This will reveal whether the value for Americans is any higher than foreigners. We hypothesised that this will NOT be the case, where we would also be able to claim the bias existed among the SyRI algorithm for having nationalities as one of their independent variables. 
 //
 
-
-The results were compatible with our initial hypothesis. By replacing the variables (education, marital status, occupation, and sex) into numerical valuables, we ran a code to calculate the final score that detects the likelihood of a person committing a fraud (0 to 1, the larger the score is, the less likely they will commit frauds). From the final score, we calculated the average score for each nationality, which showed the likelihood of people from each country committing frauds, based on their demographics. The results showed that there are a number foreigners scoring higher than the Americans. The score calculated for an average US citizen (0.771865), was ranked the 19th out of 41 coutnries. This means that there are 18 nationalities ahead of the American nationality that were identified to be 'less riskier'. This shows that, according to the dataset we had with the equation we prepared, foreigners were not identified to be riskier. This could suggest that the Dutch SyRI system was heavily biased, as our hypothesis predicted. According to our results, using nationality as an indicator does not improve the result as nationals were not identified to be less risky. Even for those foreigners that scored lower than Americans, there was not a huge difference in terms of the score. No country scored below 0.7, where Portugal being the lowest scoring 0.709531, roughly a 0.06 point difference. 
-
-## Limitations of our study
-Although we did our best to come up with a study that closely illustrated the Dutch SyRI case, our study is limited in various ways. 
-In terms of our methodology, firstly, the dataset used was an American one. It was hard to find a dataset that had detailed demographic descriptions, and the one we used was the most detailed and comprehensive one. When it comes to coming up with the equation we used to calculate the risk score, we made sure that there are reasons behind the way we assign values for each variable, and putting weights (coefficients). During this process, however, multiple studies were used at once, which was not ideal as those studies obviously treated different matters with different datasets. 
-Yet, despite all the factors that we could control, the result observed was contrary to 
-
-## Further research topics
 
 
 
@@ -113,14 +101,25 @@ Yet, despite all the factors that we could control, the result observed was cont
 
 ![alt text](http://url/to/img.png)
 
+The results were compatible with our initial hypothesis. By replacing the variables (education, marital status, occupation, and sex) into numerical valuables, we ran a code to calculate the final score that detects the likelihood of a person committing a fraud (0 to 1, the larger the score is, the less likely they will commit frauds). The results showed that there are a number foreign countries scoring higher than the Americans. The score calculated for an average US citizen (0.771865), was ranked the 19th out of 41 countries. This means that there are 18 nationalities ahead of the American nationality that were identified to be 'less riskier'. This shows that, according to the dataset we had with the equation we prepared, it is rather absurd to conclude that foreigners are riskier. This could suggest that the Dutch SyRI system was heavily biased, as our hypothesis predicted. According to our results, using nationality as an indicator does not improve the result as nationals were not identified to be less risky. Even for those foreigners that scored lower than Americans, there was not a huge difference in terms of the score. No country scored below 0.7, with Portugal being the lowest scoring 0.709531, roughly a 0.06 point difference between Americans. Using nationality as one of the variables would actually deteriorate the risk assessment. 
+
+## Limitations of our study
+Although we did our best to come up with a study that closely illustrated the Dutch SyRI case, our study is limited in various ways. 
+In terms of our methodology, firstly, the dataset used was an American one. It was hard to find a dataset that had detailed demographic descriptions, especially among European countries due to the existing resignations discussed above. The dataset we used was the most detailed and comprehensive one, by having various demographic variables. 
+When it comes to coming up with the equation we used to calculate the risk score, we made sure that there are reasons behind the way we assign values for each variable, and putting weights (coefficients). During this process, however, multiple studies were used at once, which was not ideal as those studies obviously treated different matters with different datasets. Cross referencing was necessary as statistical data that existed for each study was not enough to fully construct the equation. 
+Yet, despite all the factors that we could control, the result observed was in line with our hypothesis. In that sense, our study was successful to achieve results that we initially hoped for. Our methodology did not use an inductive approach of determining values and weights in such a way to obtain results that aligned with the initial hypothesis. It is rather the data we utilised, rather than the overall process of the methodology, that could be improved. 
+
+## Further research topics
+Further research can first be done with finding a dataset that is more closer to the Dutch case. Sources with the same information, but extracted in the Netherlands, can significantly boost the credibility of the study. However, as we are treating a case where the Dutch government prefers not to disclose information, this process can be extremely challenging. 
+In terms of the equation itself, for the weights and values assigned, it is impossible to access the actual
+information once again. There is currently no way to know what the dutch algorithm used, since such information is also confidential. It is inevitable that we assume the variables they used, while assuming those values and numerical values. What can be done for further research, however, could be to play around with different numbers and weights. By modifying those values and comparing different weights and numbers assigned, we could figure out which variable plays a bigger role in determining the final result, and vice versa. 
+Our study did not use machine algorithms in order to avoid our study being overly complicated. It was also extremely difficult to do so as we did not possess annotated data (which is again kept confidential) that can be used in order to conduct training. By doing a thorough research, and if ever it is possible to find dataset that includes the demographics of each individual as well as their fraud outcomes, it would be a challenging yet exciting task to conduct a machine learning experiment. 
+Lastly, when it comes to the display of our study, more analysis could have been done. There can be various diagrams that could have visualised our results. Tools such as box-plots could have been useful in order to see if there was a notable range for the final score we calculated for each nationality. In order to improve the quality of our study, in regards to the final scores we have obtained, statistical measures such as standard errors could have been used to observe the variance for the results. 
 
 
 
 ## Conclusion
 
-All in all, the childcare benefits affair of the Netherlands has certainly supported the argument that AI
-algorithms can be discriminatory, and that they can cause severe implications. With the increase of
-the use of algorithms in data processing of governments and institutions, the risk of discrimination to
-become more evident is very logical, considering most bias already preexisted within the institutions
-that adopted the biased systems.
+Was the Dutch government and their algorithm biased to include nationality as one of its variables to determine the fraud risk of an individual? Our study and findings support our hypothesis that the algorithm was indeed biased. With the increase of the use of algorithms in data processing of governments and institutions, the risk of discrimination to become more evident is very logical, considering most bias already preexisted within the institutions that adopted the biased systems. According to our research, there were foreigners who showed less risk of committing fraud relative to the natives. Hence, it is not sound to claim that nationality is a statistically significant determinant for such an assessment. 
+Meanwhile, the limitations of our study can pose some doubts for its credibility. It was a difficult topic to tackle, as available data was not abundant. There are few improvements that can be made to improve the quality of our assessment that can be incorporated when conducting some future research. Yet, it was a great joy for us to be able to potentially reveal the bias that existed among the SyRI algorithm, with our sincere hope that those individuals who were disproportionately affected by the bias will be compensated in a reasonable manner. 
 
